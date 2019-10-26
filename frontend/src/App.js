@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
 import Login from './Login';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <a href="/login">Login</a>
         </aside>
         <section class="app-main-section">
+          <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
         </section>
         <footer class="app-footer">

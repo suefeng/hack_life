@@ -18,6 +18,7 @@ steps:
 - script: |
     npm install
     npm run build
+  workingDirectory: '$(Build.SourcesDirectory)/frontend'
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2

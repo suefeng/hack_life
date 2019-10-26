@@ -30,7 +30,7 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Free Trial(8b9edd9a-2350-4085-836e-6fb70c391652)'
     appType: 'webAppLinux'
-    WebAppName: 'hackhlth'
+    WebAppName: 'hackhlth-back'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     RuntimeStack: 'NODE|12-lts'
     StartupCommand: 'npm start'

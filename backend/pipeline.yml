@@ -33,4 +33,4 @@ steps:
     WebAppName: 'hackhlth-back'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     RuntimeStack: 'NODE|12-lts'
-    StartupCommand: 'npm start'
+    StartupCommand: 'npm run start'

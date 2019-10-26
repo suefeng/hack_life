@@ -10,11 +10,16 @@
 
 import app from './app';
 import db from './db';
-import redis from './redis';
+// import redis from './redis';
 import errors from './errors';
+
+require('dotenv').config();
 
 const port = process.env.PORT || 8080;
 const host = process.env.HOSTNAME || '0.0.0.0';
+
+console.log(`Session secret: ${process.env.SESSION_SECRET}`);
+console.log(`Database URL: ${process.env.DATABASE_URL}`);
 
 // Launch Node.js server
 const server = app.listen(port, host, () => {
@@ -24,7 +29,7 @@ const server = app.listen(port, host, () => {
 // Shutdown Node.js app gracefully
 function handleExit(options, err) {
   if (options.cleanup) {
-    const actions = [server.close, db.destroy, redis.quit];
+    const actions = [server.close, db.destroy /* , redis.quit */];
     actions.forEach((close, i) => {
       try {
         close(() => {

@@ -25,12 +25,16 @@ steps:
     archiveFile: '$(System.DefaultWorkingDirectory)/**/*.zip'
     replaceExistingArchive: true
 
+- upload: $(System.DefaultWorkingDirectory)/**/*.zip
+  artifact: drop
+
 - task: AzureRmWebAppDeployment@4
+  displayName: 'Azure Web App Deploy: linda-test-web'
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Free Trial(1)(8b9edd9a-2350-4085-836e-6fb70c391652)'
     appType: 'webAppLinux'
     WebAppName: 'hackhlth-back'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
     RuntimeStack: 'NODE|12-lts'
     StartupCommand: 'npm run start'

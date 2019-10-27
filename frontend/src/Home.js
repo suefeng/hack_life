@@ -8,7 +8,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home">
-                <div class="home-inner">
+                <div className="home-inner">
                     <h1>Welcome to A2O</h1>
                     <p>When is your due date?</p>
                     <form onSubmit={this.handleSubmit}>

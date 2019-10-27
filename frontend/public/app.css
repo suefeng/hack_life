@@ -5,6 +5,7 @@
 body {
     padding: 0;
     margin: 0;
+    min-width: 320px;
 }
 
 .app {
@@ -241,12 +242,14 @@ a.app-sidebar-logo {
     font-size: 1.375rem;
 }
 
-.breadcrumb a {
+.breadcrumb a,
+.breadcrumb button {
     font-size: 3rem;
     padding: 0 1rem;
     text-decoration: none;
     position: relative;
     top: 3px;
+    cursor: pointer;
 }
 
 .grid-about {
@@ -321,6 +324,17 @@ a.app-sidebar-logo {
 
 .diary-entry-tags {
     margin: 1rem 0 2rem;
+}
+
+.doctors-portal *,
+.doctors-portal h1,
+.doctors-portal h2,
+.doctors-portal h3 {
+    font-family: 'sofia-pro';
+}
+
+.doctors-portal h3 {
+    margin: 0;
 }
 
 .diary-entry-tags button {

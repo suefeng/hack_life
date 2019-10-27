@@ -14,7 +14,7 @@ class Diary extends React.Component {
         return (
             <div className="diary">
                 <h1>Diary</h1>
-                <div class="wrapper">
+                <div className="wrapper">
                     <div className="app-grid">
                         <Calendar
                             onChange={this.onChange}

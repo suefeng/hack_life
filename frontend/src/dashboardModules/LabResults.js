@@ -22,7 +22,7 @@ class LabResults extends React.Component {
         const elems = data.labResults.map(({ lab, date, result, url }) => {
             return (
 
-                <tr><td>{lab}</td><td>{date}</td><td>{result}</td><td><a href="{url}">View</a></td></tr>
+                <tr><td>{lab}</td><td>{date}</td><td>{result}</td><td><a href={url}>View</a></td></tr>
 
             );
         })

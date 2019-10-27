@@ -18,7 +18,7 @@ class DoctorsVisits extends React.Component {
         const elems = data.doctorsVisits.map(({ doctor, date, purpose, url }) => {
             return (
 
-                <tr><td>{doctor}</td><td>{date}</td><td>{purpose}</td><td><a href="{url}">View</a></td></tr>
+                <tr><td>{doctor}</td><td>{date}</td><td>{purpose}</td><td><a href={url}>View</a></td></tr>
 
             );
         })

@@ -1,3 +1,14 @@
+## Pages
+- Home
+- Dashboard
+- Diary
+- Diary Entry
+- Doctor's Portal
+
+## Todo's
+- Doctor's Portal viewing as well as entering entries
+- Graphs (nice to have, but can use pictures placeholders if time runs out)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

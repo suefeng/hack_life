@@ -27,34 +27,19 @@ class Dashboard extends React.Component {
             <div className="dashboard">
                 <div className="breadcrumb"><a href="/prev">&lsaquo;</a> Week 5: Oct. 10&ndash;17, 2019 <a href="/next">&rsaquo;</a></div>
                 <div className="app-grid">
-                    <div className="app-module" >
-                        <h2>What's new</h2>
-                        <div className="white">
-                            <h3>Upcoming appointment</h3>
-                            <Appointments />
-                        </div>
-                    </div>
-                    {/* <div className="app-module" >
-                        <h2>Daily tips</h2>
-                        <DailyTips />
-                    </div>
-                    <div className="app-module" >
-                        <h2>You might experience</h2>
-                        <YouMightExperience />
-                    </div>
-                    <div className="app-module" >
-                        <h2>Lab results</h2>
-                        <LabResults />
-                    </div> */}
-                    <div className="app-module" >
-                        <h2>Checklist</h2>
+                    <div className="app-module">
+                        <h2>Daily checklist</h2>
                         <Checklist />
+                    </div>
+                    <div className="app-module">
+                        <h2>Upcoming</h2>
+                        <Appointments />
                     </div>
                 </div>
                 <div className="grid-about">
                     <About />
                 </div>
-            </div >
+            </div>
         );
     }
 }

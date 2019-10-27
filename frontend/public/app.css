@@ -326,6 +326,17 @@ a.app-sidebar-logo {
     margin: 1rem 0 2rem;
 }
 
+.doctors-portal *,
+.doctors-portal h1,
+.doctors-portal h2,
+.doctors-portal h3 {
+    font-family: 'sofia-pro';
+}
+
+.doctors-portal h3 {
+    margin: 0;
+}
+
 .diary-entry-tags button {
     border-radius: 20px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);

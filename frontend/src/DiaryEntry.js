@@ -22,15 +22,15 @@ class DiaryEntry extends React.Component {
                         </div>
                     </div>
                     <div className="app-grid">
-                        <div class="first">
+                        <div className="first">
                             <p><label>Blood glucose level</label><br />
                                 <strong>{data.bloodGlucose}</strong></p>
                             <p><label>Blood pressure</label><br />
                                 <strong>{data.bloodPressure}</strong></p>
                             <p><label>Health data</label><br />
-                                <button class="button grey">Connect to MyFitnessPal</button></p>
+                                <button className="button grey">Connect to MyFitnessPal</button></p>
                         </div>
-                        <div class="second">
+                        <div className="second">
                             <label>Notes for doctor</label>
                             <textarea name="notes-for-doctor" className="app-textarea">Feeling numbness in hands, very tired, also very thirsty.</textarea>
                             <input type="submit" value="Add entry" className="button" />

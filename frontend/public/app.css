@@ -367,6 +367,12 @@ a.app-sidebar-logo {
     bottom: 0;
     background: #f4f4f4;
 }
+.doctors-portal .inner {
+    padding: 0 1rem;
+}
+.doctors-portal .wrapper {
+    padding: 0 0 5rem;
+}
 .doctors-portal-heading {
     padding: 5px 0;
     margin: 0;
@@ -376,7 +382,6 @@ a.app-sidebar-logo {
 }
 .doctors-portal-heading h1 {
     margin: 0;
-    padding: 0 1rem;
     font-size: 1.875rem;
 }
 
@@ -405,7 +410,8 @@ a.app-sidebar-logo {
     background: #356fd9;
     color: #fff;
     border: 0;
-    float: right;
+    position: absolute;
+    right: 1rem;
     font-size: 1rem;
     padding: .5rem 1rem;
     text-align: center;

@@ -15,13 +15,18 @@ class DoctorsVisits extends React.Component {
         event.preventDefault();
     }
     render() {
-        const elems = data.doctorsVisits.map(({ doctor, date, purpose, url }) => {
-            return (
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        let elems = data.doctorsVisits
+            .map(({ doctor, date, purpose, url }) => {
+                let day = date.getDate();
+                let monthNum = date.getMonth();
+                let month = monthNames[monthNum];
+                let year = date.getFullYear();
+                return (
+                    <tr><td>{doctor}</td><td>{month} {day}, {year}</td><td>{purpose}</td><td><a href={url}>View</a></td></tr>
 
-                <tr><td>{doctor}</td><td>{date}</td><td>{purpose}</td><td><a href={url}>View</a></td></tr>
-
-            );
-        })
+                );
+            })
         return (
             <table className="table">
                 <tr><th>Doctor</th><th>Date</th><th>Purpose</th><th></th></tr>

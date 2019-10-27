@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import logo from './logo.svg';
+import sprouts from './sprouts.svg';
 import hamburger from './hamburger.svg';
 import Home from './Home';
 import Dashboard from './Dashboard';
@@ -30,12 +30,12 @@ class App extends React.Component {
           <header className="app-header">
             <div className="inner">
               <button className="app-hamburger" onClick={this.toggleHidden}><img src={hamburger} alt="" /></button>
-              <h1><a href="/dashboard"><img src={logo} className="app-logo" alt="logo" /> A2O</a></h1>
+              <h1><a href="/dashboard"><img src={sprouts} className="app-logo" alt="logo" /> A2O</a></h1>
             </div>
           </header>
           <aside id="sidebar" className="app-sidebar hide">
             <ul>
-              <li><button className="app-hamburger" onClick={this.toggleHidden}><img src={hamburger} alt="" /></button><a href="/dashboard" className="app-sidebar-logo"><img src={logo} className="app-logo" alt="logo" /> A2O</a></li>
+              <li><button className="app-hamburger" onClick={this.toggleHidden}><img src={hamburger} alt="" /></button><a href="/dashboard" className="app-sidebar-logo"><img src={sprouts} className="app-logo" alt="logo" /> A2O</a></li>
               <li><a href="/dashboard">Dashboard</a></li>
               <li><a href="/diary">Diary</a></li>
               <li><a href="/reports">Reports</a></li>

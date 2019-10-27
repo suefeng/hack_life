@@ -1,5 +1,6 @@
 import React from 'react';
-
+import logo from './logo.svg';
+import welcome from './welcometo-sprouts.svg';
 class Home extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
@@ -9,7 +10,8 @@ class Home extends React.Component {
         return (
             <div className="home">
                 <div className="home-inner">
-                    <h1>Welcome to A2O</h1>
+                    <img src={logo} alt="" />
+                    <h1><img src={welcome} alt="" /></h1>
                     <p>When is your due date?</p>
                     <form onSubmit={this.handleSubmit}>
                         <input className="app-input" type="date" placeholder="MM DD YYYY" />

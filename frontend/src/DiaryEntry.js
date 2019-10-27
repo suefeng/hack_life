@@ -14,7 +14,7 @@ class DiaryEntry extends React.Component {
                 <h1>New diary entry</h1>
                 <form onSubmit={this.handleSubmit}>
                     <p>How are you feeling?</p>
-                    <div class="diary-entry-tags">
+                    <div className="diary-entry-tags">
                         <button>Exhausted</button>
                         <button>Nauseated</button>
                         <button>Fatigued</button>
@@ -22,7 +22,7 @@ class DiaryEntry extends React.Component {
                         <button>Constipation</button>
                         <button>Cramping</button>
                     </div>
-                    <div class="app-grid">
+                    <div className="app-grid">
                         <div>
                             <p><label>Blood glucose level</label>
                                 {data.bloodGlucose}</p>
@@ -32,7 +32,7 @@ class DiaryEntry extends React.Component {
                         <div>
                             <label>Notes for doctor</label>
                             <textarea name="notes-for-doctor" className="app-textarea"></textarea>
-                            <input type="submit" value="Add entry" class="button" />
+                            <input type="submit" value="Add entry" className="button" />
                         </div>
                     </div>
 

@@ -14,10 +14,10 @@ class DoctorsPortal extends React.Component {
                 <h2>Patricia</h2>
                 <p>Appointments</p>
                 <p>Oct 19, 2019, 1-1:30pm</p>
-                <div class="">
+                <div clasNames="">
                     <h3>Visit notes</h3>
                 </div>
-                <div class="">
+                <div className="">
                     <h3>After-care summary</h3>
                     <p>Checklist</p>
                 </div>

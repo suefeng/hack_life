@@ -29,7 +29,7 @@ class Dashboard extends React.Component {
                 <div className="app-grid">
                     <div className="app-module" >
                         <h2>What's new</h2>
-                        <div class="white">
+                        <div className="white">
                             <h3>Upcoming appointment</h3>
                             <Appointments />
                         </div>
@@ -51,7 +51,7 @@ class Dashboard extends React.Component {
                         <Checklist />
                     </div>
                 </div>
-                <div class="grid-about">
+                <div className="grid-about">
                     <About />
                 </div>
             </div >

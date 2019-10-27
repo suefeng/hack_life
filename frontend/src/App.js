@@ -47,7 +47,7 @@ class App extends React.Component {
 }
 const Sidebar = () => (
   <div>
-    <aside class="app-sidebar">
+    <aside className="app-sidebar">
       <ul>
         <li><a href="/" className="app-sidebar-logo"><img src={logo} className="app-logo" alt="logo" /> Life Milestones</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
@@ -56,7 +56,7 @@ const Sidebar = () => (
         <li><a href="/logout">Log out</a></li>
       </ul>
     </aside>
-    <div className="overlay"></div>
+    <div className="overlay" onclick={this.toggleHidden}></div>
   </div>
 )
 export default App;

@@ -30,7 +30,9 @@ steps:
     replaceExistingArchive: true
 
 - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-  artifact: drop
+  artifact: |
+    name: drop
+    type: Server
 
 - task: AzureRmWebAppDeployment@4
   displayName: 'Azure Web App Deploy: hackhlth frontend'
@@ -42,5 +44,4 @@ steps:
     package: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     RuntimeStack: 'NODE|12-lts'
     StartupCommand: 'npm run start'
-    WebConfigParameters: |
-      NodeStartFile: './src/index.js'
+    WebConfigParameters: '-NodeStartFile ./src/index.js'

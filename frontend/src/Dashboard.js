@@ -11,7 +11,7 @@ import About from './dashboardModules/About';
 
 import { weekToDate } from './constants';
 
-const INITIAL_WEEK = 2;
+const INITIAL_WEEK = 10;
 
 
 

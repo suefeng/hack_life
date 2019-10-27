@@ -68,4 +68,3 @@ stages:
               ScriptType: 'Inline Script'
               InlineScript: |
                 npm install  --verbose
-                npm run build --if-present

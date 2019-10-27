@@ -41,6 +41,6 @@ steps:
     WebAppName: 'hackhlth'
     package: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     RuntimeStack: 'NODE|12-lts'
-    StartupCommand: 'npm run prod'
-    WebConfigParameters: | 
+    StartupCommand: 'npm run start'
+    WebConfigParameters: |
       NodeStartFile: './src/index.js'

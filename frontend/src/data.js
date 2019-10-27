@@ -1,0 +1,136 @@
+export const data = {
+    "appointments": [
+        {
+            "date": "2019-10-10",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-11",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-12",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-11-14",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-12-10",
+            "text": "blah blah"
+        }
+    ].map(({ date, text }) => ({
+        date: new Date(date), text
+    })),
+    "dailyTips": [
+        {
+            "date": "2019-10-10",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-11",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-12",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-11-14",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-12-10",
+            "text": "blah blah"
+        }
+    ],
+    "youMightExperience": [
+        {
+            "date": "2019-10-10",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-11",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-12",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-11-14",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-12-10",
+            "text": "blah blah"
+        }
+    ],
+    "labResults": [
+        {
+            "date": "2019-10-10",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-11",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-12",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-11-14",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-12-10",
+            "text": "blah blah"
+        }
+    ],
+    "checkList": [
+        {
+            "date": "2019-10-10",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-11",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-12",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-11-14",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-12-10",
+            "text": "blah blah"
+        }
+    ],
+    "stayingHealthy": [
+        {
+            "date": "2019-10-10",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-11",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-10-12",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-11-14",
+            "text": "blah blah"
+        },
+        {
+            "date": "2019-12-10",
+            "text": "blah blah"
+        }
+    ]
+};

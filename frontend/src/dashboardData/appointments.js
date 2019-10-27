@@ -11,7 +11,7 @@ export const appointments =
     {
       "date": weekToDate(4),
       "text": "Checkup",
-      "practitioner": practitioners[0],
+      "practitioner": practitioners[1],
       "time": "3:00-3:30pm"
     },
     {

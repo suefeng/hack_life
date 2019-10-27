@@ -8,7 +8,7 @@ class Reports extends React.Component {
         window.location.href = '/dashboard';
     }
     state = {
-      selectedOption: { value: 'trends', label: 'Health trends' },
+        selectedOption: { value: 'trends', label: 'Health trends' },
     };
     handleChange = selectedOption => {
         this.setState(
@@ -60,7 +60,6 @@ class Reports extends React.Component {
                         <p>{data.other}</p>
                     </div>
                     <div id="trends">
-                        <h2>Blood glucose and pressure trends</h2>
                         <LineChart />
                     </div>
                 </div>

@@ -64,8 +64,16 @@ const pressureData = {
 
 function LineChart() {
   return <>
-    <Line data={glucoseData} />
-    <Line data={pressureData} />
+    <div class="app-grid">
+      <div>
+        <h2>Blood glucose trends</h2>
+        <Line data={glucoseData} />
+      </div>
+      <div>
+        <h2>Blood pressure trends</h2>
+        <Line data={pressureData} />
+      </div>
+    </div>
   </>
 }
 

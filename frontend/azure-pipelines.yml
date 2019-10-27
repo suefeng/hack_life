@@ -39,6 +39,8 @@ steps:
     azureSubscription: 'Free Trial(8b9edd9a-2350-4085-836e-6fb70c391652)'
     appType: 'webAppLinux'
     WebAppName: 'hackhlth'
-    package: $(Build.ArtifactStagingDirectory)/drop/$(Build.BuildId).zip
+    package: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     RuntimeStack: 'NODE|12-lts'
     StartupCommand: 'npm run prod'
+    WebConfigParameters: | 
+      NodeStartFile: './src/index.js'

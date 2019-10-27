@@ -36,6 +36,7 @@ class App extends React.Component {
           <aside id="sidebar" className="app-sidebar hide">
             <ul>
               <li><button className="app-hamburger" onClick={this.toggleHidden}><img src={hamburger} alt="" /></button><a href="/dashboard" className="app-sidebar-logo"><img src={sprouts} className="app-logo" alt="logo" /> A2O</a></li>
+              <li><span className="sidebar-patient-name">Welcome Patricia Abby!</span></li>
               <li><a href="/dashboard">Dashboard</a></li>
               <li><a href="/diary">Diary</a></li>
               <li><a href="/reports">Reports</a></li>

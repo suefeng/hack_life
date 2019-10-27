@@ -1,9 +1,7 @@
 import React from 'react';
+import Select from 'react-select';
 
 class Reports extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     handleSubmit(event) {
         event.preventDefault();
         window.location.href = '/dashboard';
@@ -21,20 +19,33 @@ class Reports extends React.Component {
         return (
             <div className="reports">
                 <h1>Reports</h1>
-                <p>Test name<br />
-                    <span className="result">{data.testName}</span></p>
-                <p>Date<br />
-                    <span className="result">{data.date}</span></p>
-                <p>Result<br />
-                    <span className="result">{data.result}</span></p>
-                <p>Flag<br />
-                    <span className="result">{data.flag}</span></p>
-                <p>Reference range<br />
-                    <span className="result">{data.referenceRange}</span></p>
-                <p>{data.other}</p>
+                <div className="wrapper">
+                    <SelectMenu />
+                    <p><span className="reports-name">Test name</span>
+                        <span className="reports-result">{data.testName}</span></p>
+                    <p><span className="reports-name">Date</span>
+                        <span className="reports-result">{data.date}</span></p>
+                    <p><span className="reports-name">Result</span>
+                        <span className="reports-result">{data.result}</span></p>
+                    <p><span className="reports-name">Flag</span>
+                        <span className="reports-result">{data.flag}</span></p>
+                    <p><span className="reports-name">Reference range</span>
+                        <span className="reports-result">{data.referenceRange}</span></p>
+                    <p>{data.other}</p>
+                </div>
             </div>
         );
     }
 }
+
+
+const options = [
+    { value: 'glucoseToleranceTest', label: 'Glucose tolerance test' },
+    { value: 'healthTrends', label: 'Health trends' }
+]
+
+const SelectMenu = () => (
+    <Select options={options} />
+)
 
 export default Reports;

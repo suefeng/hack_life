@@ -1,9 +1,6 @@
 import React from 'react';
 
 class DoctorsPortal extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     handleSubmit(event) {
         event.preventDefault();
     }

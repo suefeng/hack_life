@@ -1,9 +1,6 @@
 import React from 'react';
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     handleSubmit(event) {
         event.preventDefault();
         window.location.href = '/dashboard';

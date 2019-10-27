@@ -1,0 +1,34 @@
+{
+  "doctorVisits": {
+    "standard": [{
+      "minWeek": 2,
+      "maxWeek": 26,
+      "nextVisitAdd": 4
+    }, {
+      "minWeek": 27,
+      "maxWeek": 34,
+      "nextVisitAdd": 2
+    }, {
+      "minWeek": 35,
+      "maxWeek": 44,
+      "nextVisitAdd": 1
+    }],
+    "gestationalDiabetes": [{
+      "minWeek": 2,
+      "maxWeek": 44,
+      "nextVisit": 1
+    }]
+  },
+  "ultrasound": [
+    {"week": 12},
+    {"week": 22},
+    {"week": 32}
+  ],
+  "whoopingCough": {
+    "minWeek": 27,
+    "maxWeek": 36
+  },
+  "flu": {
+    "vaccineBy": "October"
+  }
+}

@@ -52,8 +52,12 @@
     width: 100%;
   }
 
+  .app-grid {
+    max-width: 960px;
+  }
+
   .app-grid > * {
-    width: 33%;
+    width: 50%;
     display: inline-block;
     vertical-align: top;
     padding: 0 1rem;
@@ -244,4 +248,10 @@
 
   .hide {
     display: none;
+  }
+
+  @media (max-width: 600px) {
+    .app-grid > * {
+      width: 100%;
+    }
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import LineChart from './LineChart';
 
 class Reports extends React.Component {
     handleSubmit(event) {
@@ -7,7 +8,7 @@ class Reports extends React.Component {
         window.location.href = '/dashboard';
     }
     state = {
-        selectedOption: null,
+      selectedOption: { value: 'trends', label: 'Health trends' },
     };
     handleChange = selectedOption => {
         this.setState(
@@ -42,9 +43,10 @@ class Reports extends React.Component {
                     <Select
                         value={selectedOption}
                         onChange={this.handleChange}
+
                         options={options}
                     />
-                    <div id="glucose">
+                    <div id="glucose" className="hide">
                         <p><span className="reports-name">Test name</span>
                             <span className="reports-result">{data.testName}</span></p>
                         <p><span className="reports-name">Date</span>
@@ -57,9 +59,9 @@ class Reports extends React.Component {
                             <span className="reports-result">{data.referenceRange}</span></p>
                         <p>{data.other}</p>
                     </div>
-                    <div id="trends" className="hide">
-                        <h2>Blood glucose trends</h2>
-                        <h2>Blood pressure trends</h2>
+                    <div id="trends">
+                        <h2>Blood glucose and pressure trends</h2>
+                        <LineChart />
                     </div>
                 </div>
             </div>

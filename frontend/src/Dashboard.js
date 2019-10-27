@@ -1,7 +1,7 @@
 import React from 'react';
-import Appointments from './dashboardModules/appointments';
-import Checklist from './dashboardModules/checklist';
-import About from './dashboardModules/about';
+import Appointments from './dashboardModules/Appointments';
+import Checklist from './dashboardModules/Checklist';
+import About from './dashboardModules/About';
 // import DailyTips from './dashboardModules/dailyTips';
 // import LabResults from './dashboardModules/labResults';
 // import StayingHealthy from './dashboardModules/stayingHealthy';

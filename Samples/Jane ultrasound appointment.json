@@ -1,0 +1,103 @@
+{
+  "resourceType": "Appointment",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sprout Jane Doe 8 weeks</div>"
+  },
+  "status": "booked",
+  "serviceCategory": [
+    {
+      "coding": [
+        {
+          "system": "http://example.org/service-category",
+          "code": "gp",
+          "display": "General Practice"
+        }
+      ]
+    }
+  ],
+  "serviceType": [
+    {
+      "coding": [
+        {
+          "code": "52",
+          "display": "General Discussion"
+        }
+      ]
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "394814009",
+          "display": "General practice"
+        }
+      ]
+    }
+  ],
+  "appointmentType": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+        "code": "FOLLOWUP",
+        "display": "A follow up visit from a previous appointment"
+      }
+    ]
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/example",
+      "display": "8 weeks pregnant"
+    }
+  ],
+  "priority": 5,
+  "description": "Jane is 8 weeks pregnant!",
+  "start" : "2019-12-15T11:08:00-05:00", // When appointment is to take place
+  "end" : "2019-12-15T11:09:00-05:00", // When appointment is to conclude
+  "created": "2013-10-10",
+  "comment": "Jane wants to see the first pictures of her baby!",
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/pregnancy"
+    }
+  ],
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/3003cd06-f470-434b-9873-395643cd01c9",
+        "display": "Jane Sleepy Doe"
+      },
+      "required": "required",
+      "status": "accepted"
+    },
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "ATND"
+            }
+          ]
+        }
+      ],
+      "actor": {
+        "reference": "Practitioner/0000016d-3a85-4cca-0000-00000000012c",
+        "display": "Dr Cara845 Ruecker817"
+      },
+      "required": "required",
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "reference": "Location/1",
+        "display": "South Wing, second floor"
+      },
+      "required": "required",
+      "status": "accepted"
+    }
+  ]
+}

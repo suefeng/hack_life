@@ -1,0 +1,44 @@
+{
+  "resourceType": "Observation",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record of Jane's visit at 4 weeks</p></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "8867-4",
+        "display": "Heart rate"
+      },
+    ],
+    "text": "Heart Rate"
+  },
+  "subject": {
+    "reference": "Patient/3003cd06-f470-434b-9873-395643cd01c9",
+    "display": "Jane Sleepy Doe"
+  },
+  "encounter": {
+    "reference": "Encounter/8d7b06b3-c53f-46e7-8720-344f48cd0c40"
+  },
+  "effectiveDateTime": "2019-10-27",
+  "valueQuantity": {
+    "value": 50,
+    "unit": "beats/minute",
+    "system": "http://unitsofmeasure.org",
+    "code": "[lb_av]"
+  }
+}

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = new Array(10).fill(0).map((e, i) => 
+  new Date(2019, i + 1, 1).toLocaleString('default', { month: 'long' })
+)
+
 const defaultOptions = {
   fill: false,
   lineTension: 0.1,
@@ -17,23 +20,23 @@ const defaultOptions = {
   pointRadius: 1,
   pointHitRadius: 10
 }
-const glucoseColor = 'red';
+const glucoseColor = '#aa3415';
 const glucoseData = {
   labels,
   datasets: [
     {
-      label: 'Blood glucose (mg/dL)',
+      label: 'Blood glucose (mmol/L)',
       backgroundColor: glucoseColor,
       borderColor: glucoseColor,
       pointBorderColor: glucoseColor,
       pointHoverBackgroundColor: glucoseColor,
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [110, 112, 108, 120, 140, 170, 180, 130, 120, 110, 100],
       ...defaultOptions
     }
   ]
 }
 
-const pressureColor = 'blue';
+const pressureColor = '#4534aa';
 const pressureColorHigh = 'black';
 const pressureData = {
   labels,
@@ -44,7 +47,7 @@ const pressureData = {
       borderColor: pressureColor,
       pointBorderColor: pressureColor,
       pointHoverBackgroundColor: pressureColor,
-      data: [65, 59, 80, 81, 56, 55, 40].reverse(),
+      data: [100, 120, 140, 150, 150, 160, 150, 140, 120, 130, 110],
       ...defaultOptions
     },
     {
@@ -53,7 +56,7 @@ const pressureData = {
       borderColor: pressureColorHigh,
       pointBorderColor: pressureColorHigh,
       pointHoverBackgroundColor: pressureColorHigh,
-      data: [65, 59, 80, 81, 56, 55, 40].reverse().map(e => e + 40),
+      data: [70, 80, 100, 115, 105, 125, 115, 105, 100, 102, 80],
       ...defaultOptions
     }
   ]

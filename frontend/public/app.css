@@ -242,13 +242,14 @@ a.app-sidebar-logo {
     font-size: 1.375rem;
 }
 
-.breadcrumb a,
 .breadcrumb button {
     font-size: 3rem;
     padding: 0 1rem;
+    background: transparent;
+    border: 0;
     text-decoration: none;
     position: relative;
-    top: 3px;
+    top: 5px;
     cursor: pointer;
 }
 
@@ -400,7 +401,7 @@ a.app-sidebar-logo {
     .app-hamburger {
         padding: 0 .5rem 0 0;
     }
-    .breadcrumb a {
+    .breadcrumb button {
         padding: 0;
     }
     .dashboard-week {

@@ -19,7 +19,7 @@ class About extends React.Component {
 
         const elems = data.about
             .filter(({ week }) =>
-                (week == '5'))
+                (week === '5'))
             .map(({ week, description, trimester }) => {
                 return (
                     <div className="about-item" key={week}>

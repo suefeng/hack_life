@@ -12,64 +12,64 @@ import About from './dashboardModules/About';
 import { weekToDate } from './constants';
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.prev = this.prev.bind(this);
-    this.state = {
-      week: 0
-      // appointments: [],
-      // dailyTips: [],
-      // youMightExperience: [],
-      // labResults: [],
-      // checklist: []
-    };
-  }
-  handleSubmit(event) {
-    event.preventDefault();
-  }
-  offsetWeek(offset) {
-    this.setState(oldState => {
-      let nextWeek = oldState.week + offset
-      if (nextWeek < 0) {
-        nextWeek = 0
-      }
-      return Object.assign({}, this.state, { week: nextWeek })
-    })
-  }
-  next() {
-    this.offsetWeek(1)
-  }
-  prev() {
-    this.offsetWeek(-1)
-  }
-  render() {
-    const { week } = this.state;
-    const start = moment(weekToDate(week)).format('MMM. D');
-    const end = moment(weekToDate(week + 1)).format('MMM. D');
-    return (
-      <div className="dashboard">
-        <div className="breadcrumb">
-          <a onClick={this.prev}>&lsaquo;</a>
-          <span className="dashboard-week">Week {week}: {start}&ndash;{end}</span>
-          <a onClick={this.next}>&rsaquo;</a>
-        </div>
-        <div className="app-grid">
-          <div className="app-module">
-            <h2>Daily checklist</h2>
-            <Checklist />
-          </div>
-          <div className="app-module">
-            <h2>Upcoming</h2>
-            <Appointments />
-          </div>
-        </div>
-        <div className="grid-about">
-          <About week={week} />
-        </div>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.next = this.next.bind(this);
+        this.prev = this.prev.bind(this);
+        this.state = {
+            week: 0
+            // appointments: [],
+            // dailyTips: [],
+            // youMightExperience: [],
+            // labResults: [],
+            // checklist: []
+        };
+    }
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+    offsetWeek(offset) {
+        this.setState(oldState => {
+            let nextWeek = oldState.week + offset
+            if (nextWeek < 0) {
+                nextWeek = 0
+            }
+            return Object.assign({}, this.state, { week: nextWeek })
+        })
+    }
+    next() {
+        this.offsetWeek(1)
+    }
+    prev() {
+        this.offsetWeek(-1)
+    }
+    render() {
+        const { week } = this.state;
+        const start = moment(weekToDate(week)).format('MMM. D');
+        const end = moment(weekToDate(week + 1)).format('MMM. D');
+        return (
+            <div className="dashboard">
+                <div className="breadcrumb">
+                    <button onClick={this.prev}>&lsaquo;</button>
+                    <span className="dashboard-week">Week {week}: {start}&ndash;{end}</span>
+                    <button onClick={this.next}>&rsaquo;</button>
+                </div>
+                <div className="app-grid">
+                    <div className="app-module">
+                        <h2>Daily checklist</h2>
+                        <Checklist />
+                    </div>
+                    <div className="app-module">
+                        <h2>Upcoming</h2>
+                        <Appointments />
+                    </div>
+                </div>
+                <div className="grid-about">
+                    <About week={week} />
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Dashboard;

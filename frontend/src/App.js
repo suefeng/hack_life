@@ -5,6 +5,7 @@ import hamburger from './hamburger.svg';
 import Home from './Home';
 import Dashboard from './Dashboard';
 import DoctorsPortal from './DoctorsPortal';
+import DoctorsPortalEntry from './DoctorsPortalEntry.js';
 import Diary from './Diary';
 import DiaryEntry from './DiaryEntry';
 import Reports from './Reports';
@@ -46,6 +47,7 @@ class App extends React.Component {
             <div className="inner">
               <Route exact path="/" component={Home} />
               <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/doctors-portal-entry" component={DoctorsPortalEntry} />
               <Route exact path="/doctors-portal" component={DoctorsPortal} />
               <Route exact path="/diary" component={Diary} />
               <Route exact path="/diary-entry" component={DiaryEntry} />

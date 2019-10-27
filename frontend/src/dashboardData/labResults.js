@@ -18,5 +18,7 @@ export const data = {
             "result": "Normal",
             "url": "/doctors-portal-entry"
         }
-    ]
+    ].map(({ date, ...rest }) => ({
+        date: new Date(date), ...rest
+    }))
 };

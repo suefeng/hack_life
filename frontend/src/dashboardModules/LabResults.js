@@ -15,17 +15,19 @@ class LabResults extends React.Component {
         event.preventDefault();
     }
     render() {
-        //const { labResults } = this.state;
-        let startdate = new Date('2019-10-10');
-        let enddate = new Date('2019-10-17');
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        let elems = data.labResults
+            .map(({ lab, date, result, url }) => {
+                let day = date.getDate();
+                let monthNum = date.getMonth();
+                let year = date.getFullYear();
+                let month = monthNames[monthNum];
+                return (
 
-        const elems = data.labResults.map(({ lab, date, result, url }) => {
-            return (
+                    <tr><td>{lab}</td><td>{month} {day}, {year}</td><td>{result}</td><td><a href={url}>View</a></td></tr>
 
-                <tr><td>{lab}</td><td>{date}</td><td>{result}</td><td><a href={url}>View</a></td></tr>
-
-            );
-        })
+                );
+            })
         return (
             <table className="table">
                 <tr><th>Lab</th><th>Date</th><th>Result</th><th></th></tr>

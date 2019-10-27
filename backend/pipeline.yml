@@ -15,6 +15,7 @@ steps:
 
 - script: |
     npm install
+  workingDirectory: '$(Build.SourcesDirectory)/backend'
   displayName: 'scrip blah'
 
 - task: ArchiveFiles@2

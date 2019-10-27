@@ -56,7 +56,7 @@ const Sidebar = () => (
         <li><a href="/logout">Log out</a></li>
       </ul>
     </aside>
-    <div className="overlay" onClick={this.toggleHidden.bind(this)}></div>
+    <div className="overlay"></div>
   </div>
 )
 export default App;

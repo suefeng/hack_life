@@ -11,7 +11,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '12.x'
 
 - script: |
     npm install
@@ -29,12 +29,12 @@ steps:
   artifact: drop
 
 - task: AzureRmWebAppDeployment@4
-  displayName: 'Azure Web App Deploy: linda-test-web'
+  displayName: 'Azure Web App Deploy: hackhlth-backend'
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Free Trial(1)(8b9edd9a-2350-4085-836e-6fb70c391652)'
     appType: 'webAppLinux'
     WebAppName: 'hackhlth-back'
-    package: $(Pipeline.Workspace)/$(Build.BuildId).zip
+    package: $(Pipeline.Workspace)/../$(Build.BuildId).zip
     RuntimeStack: 'NODE|12-lts'
     StartupCommand: 'npm run start'

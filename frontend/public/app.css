@@ -233,6 +233,7 @@ a.app-sidebar-logo {
     padding: .6rem 1rem;
     width: auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 .button.grey {
     background: #a8a8a8;

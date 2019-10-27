@@ -117,6 +117,7 @@ a {
     border: 1px solid #d2d2d2;
     margin: .5rem 0 1.5rem;
     height: 100px;
+    line-height: 1.6;
     font-family: 'sofia-pro';
     font-size: 1rem;
 }
@@ -348,15 +349,58 @@ a.app-sidebar-logo {
     margin: 1rem 0 2rem;
 }
 
+.doctors-portal {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f4f4f4;
+}
+.doctors-portal-heading {
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    background: #356fd9;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+.doctors-portal-heading h1 {
+    margin: 0;
+    font-size: 1.875rem;
+}
+
 .doctors-portal *,
 .doctors-portal h1,
 .doctors-portal h2,
 .doctors-portal h3 {
-    font-family: 'sofia-pro';
+    font-family: Arial;
 }
-
+.doctors-portal h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
 .doctors-portal h3 {
     margin: 0;
+    font-size: 1.25rem;
+}
+.doctors-portal p {
+    margin: 0 0 1rem;
+}
+.doctors-portal .date {
+    font-weight: 300;
+}
+
+.doctors-portal-button {
+    background: #356fd9;
+    color: #fff;
+    border: 0;
+    float: right;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    width: auto;
+    cursor: pointer;
 }
 
 .diary-entry-tags button {
@@ -418,6 +462,9 @@ a.app-sidebar-logo {
     .app-module,
     .grid-about {
         padding: 0;
+    }
+    .doctors-portal .inner {
+        padding: 0 1rem;
     }
     .app-hamburger {
         padding: 0 .5rem 0 0;

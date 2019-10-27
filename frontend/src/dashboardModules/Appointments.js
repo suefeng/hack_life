@@ -45,24 +45,5 @@ function Appointments(props) {
         </div>
     )
 }
-// function Modal() {
-//     function close() {
-//         document.getElementById('notifications').classList.add('hide');
-//     }
-//     render(){
-//         return (
-//             <div id="notifications" className="overlay">
-//                 <div className="appointments">
-//                     <h2>Record share request</h2>
-//                     <p>Dr. Smith referred you to Dr. Jazz. Share records with Dr. Jazz?</p>
-//                     <button className="cancel" onClick={close}>Cancel</button><button className="confirm" onClick={close}>Confirm</button>
-//                 </div>
-//             </div>
-//         )
-//     }
-//     setTimeout(function () {
-//         Modal
-//     }, 2000)
-// }
 
 export default Appointments;

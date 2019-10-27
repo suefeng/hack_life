@@ -20,7 +20,7 @@ class Diary extends React.Component {
                             onChange={this.onChange}
                             value={this.state.date}
                         />
-                        <div>
+                        <div className="diary-new">
                             <button className="button" onClick={this.handleSubmit}>New entry</button>
                         </div>
                     </div>

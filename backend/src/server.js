@@ -6,14 +6,14 @@
  */
 
 /* @flow */
-/* eslint-disable no-console, no-shadow */
+/* eslint-disable import/first, no-console, no-shadow */
+
+require('dotenv').config();
 
 import app from './app';
 import db from './db';
 // import redis from './redis';
 import errors from './errors';
-
-require('dotenv').config();
 
 const port = process.env.PORT || 8080;
 const host = process.env.HOSTNAME || '0.0.0.0';

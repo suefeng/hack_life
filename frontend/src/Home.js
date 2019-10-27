@@ -8,13 +8,15 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home">
-                <h1>Welcome to Life Milestones</h1>
-                <p>When is your due date?</p>
-                <form onSubmit={this.handleSubmit}>
-                    <input className="app-input" type="date" placeholder="MM DD YYYY" />
-                    <input className="button" type="submit" value="Login" />
-                </form>
-                <a href="/new-account">New account</a>
+                <div class="home-inner">
+                    <h1>Welcome to A2O</h1>
+                    <p>When is your due date?</p>
+                    <form onSubmit={this.handleSubmit}>
+                        <input className="app-input" type="date" placeholder="MM DD YYYY" />
+                        <input className="button" type="submit" value="Login" />
+                    </form>
+                    <a href="/new-account">New account</a>
+                </div>
             </div>
         );
     }

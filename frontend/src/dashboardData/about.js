@@ -3,7 +3,7 @@ export const data = {
         {
             "week": 2,
             "trimester": "first",
-            "description": "It's a potentially life-changing {week. You'll ovulate, and if egg meets sperm, you'll be on your way to pregnancy!"
+            "description": "It's a potentially life-changing week. You'll ovulate, and if egg meets sperm, you'll be on your way to pregnancy!"
         },
         {
             "week": 3,

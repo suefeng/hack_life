@@ -11,22 +11,16 @@ import About from './dashboardModules/About';
 
 import { weekToDate } from './constants';
 
+const INITIAL_WEEK = 2;
+
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.next = this.next.bind(this);
         this.prev = this.prev.bind(this);
         this.state = {
-            week: 0
-            // appointments: [],
-            // dailyTips: [],
-            // youMightExperience: [],
-            // labResults: [],
-            // checklist: []
+            week: INITIAL_WEEK
         };
-    }
-    handleSubmit(event) {
-        event.preventDefault();
     }
     offsetWeek(offset) {
         this.setState(oldState => {
@@ -57,11 +51,11 @@ class Dashboard extends React.Component {
                 <div className="app-grid">
                     <div className="app-module">
                         <h2>Daily checklist</h2>
-                        <Checklist />
+                        <Checklist week={week} />
                     </div>
                     <div className="app-module">
                         <h2>Upcoming</h2>
-                        <Appointments />
+                        <Appointments week={week} />
                     </div>
                 </div>
                 <div className="grid-about">

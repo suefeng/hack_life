@@ -303,6 +303,10 @@ a.app-sidebar-logo {
     font-weight: 600;
 }
 
+.checklist-item a {
+    text-decoration: none;
+}
+
 .reports-name {
     color: #777;
     display: block;

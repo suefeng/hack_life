@@ -369,6 +369,7 @@ a.app-sidebar-logo {
 }
 .doctors-portal .inner {
     padding: 0 1rem;
+    position: relative;
 }
 .doctors-portal .wrapper {
     padding: 0 0 5rem;

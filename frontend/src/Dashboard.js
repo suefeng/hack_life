@@ -1,5 +1,11 @@
 import React from 'react';
-import { data } from './data';
+import Appointments from './dashboardModules/appointments';
+import Checklist from './dashboardModules/checklist';
+import About from './dashboardModules/about';
+// import DailyTips from './dashboardModules/dailyTips';
+// import LabResults from './dashboardModules/labResults';
+// import StayingHealthy from './dashboardModules/stayingHealthy';
+// import YouMightExperience from './dashboardModules/youMightExperience';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -16,55 +22,37 @@ class Dashboard extends React.Component {
     }
     render() {
         //const { appointments } = this.state;
-        function setModule(dataName, rangeStart, rangeEnd) {
-            {
-                dataName.map(dataset => {
-                    let startdate = new Date(rangeStart);
-                    let enddate = new Date(rangeEnd);
-                    let date = dataset.date;
-                    const monthNames = ["January", "February", "March", "April", "May", "June",
-                        "July", "August", "September", "October", "November", "December"
-                    ];
-                    let day = date.getDate();
-                    let monthNum = date.getMonth();
-                    let month = monthNames[monthNum];
-                    let year = date.getFullYear();
-                    if (date >= startdate && date <= enddate) {
-                        return (
-                            <div>
-                                <p>{month} {day}, {year}</p>
-                                <p>{dataset.text}</p>
-                            </div>
-                        );
-                    }
-                })
-            }
-        }
+
         return (
             <div className="dashboard">
                 <div className="breadcrumb"><a href="/prev">&lsaquo;</a> Week 5: Oct. 10&ndash;17, 2019 <a href="/next">&rsaquo;</a></div>
-                <h1>What's coming up</h1>
                 <div className="app-grid">
                     <div className="app-module" >
-                        <h2>Appointments</h2>
-                        {setModule(data.appointments, '2019/10/10', '2019/10/17')}
+                        <h2>What's new</h2>
+                        <div class="white">
+                            <h3>Upcoming appointment</h3>
+                            <Appointments />
+                        </div>
                     </div>
-                    <div className="app-module" >
+                    {/* <div className="app-module" >
                         <h2>Daily tips</h2>
-                        {setModule(data.dailyTips, '2019/10/10', '2019/10/17')}
+                        <DailyTips />
                     </div>
                     <div className="app-module" >
                         <h2>You might experience</h2>
-                        {setModule(data.youMightExperience, '2019/10/10', '2019/10/17')}
+                        <YouMightExperience />
                     </div>
                     <div className="app-module" >
                         <h2>Lab results</h2>
-                        {setModule(data.labResults, '2019/10/10', '2019/10/17')}
-                    </div>
+                        <LabResults />
+                    </div> */}
                     <div className="app-module" >
                         <h2>Checklist</h2>
-                        {setModule(data.checklist, '2019/10/10', '2019/10/17')}
+                        <Checklist />
                     </div>
+                </div>
+                <div class="grid-about">
+                    <About />
                 </div>
             </div >
         );

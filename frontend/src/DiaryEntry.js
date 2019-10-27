@@ -1,9 +1,6 @@
 import React from 'react';
 
 class DiaryEntry extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     handleSubmit(event) {
         event.preventDefault();
     }

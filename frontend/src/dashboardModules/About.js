@@ -24,9 +24,9 @@ class About extends React.Component {
                 (date >= startdate && date <= enddate))
             .map(({ date, text, title }) => {
                 return (
-                    <div className="about-item">
+                    <div className="about-item" key={date}>
                         <h2>{title}</h2>
-                        <p>{text}</p>
+                        <p dangerouslySetInnerHTML={{ __html: text }} />
                     </div>
                 );
             })

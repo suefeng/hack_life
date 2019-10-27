@@ -27,10 +27,8 @@ class Appointments extends React.Component {
                 let day = date.getDate();
                 let monthNum = date.getMonth();
                 let month = monthNames[monthNum];
-                let year = date.getFullYear();
-                console.log(date);
                 return (
-                    <div className="appointment">
+                    <div className="appointment" key={date}>
                         <div className="appointment-date">
                             <p><span className="appointment-month">{month}</span><span className="appointment-day">{day}</span></p>
                         </div>

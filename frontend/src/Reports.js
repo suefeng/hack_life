@@ -18,17 +18,19 @@ class Reports extends React.Component {
         return (
             <div className="reports">
                 <h1>Reports</h1>
-                <p>Test name<br />
-                    <span className="result">{data.testName}</span></p>
-                <p>Date<br />
-                    <span className="result">{data.date}</span></p>
-                <p>Result<br />
-                    <span className="result">{data.result}</span></p>
-                <p>Flag<br />
-                    <span className="result">{data.flag}</span></p>
-                <p>Reference range<br />
-                    <span className="result">{data.referenceRange}</span></p>
-                <p>{data.other}</p>
+                <div className="wrapper">
+                    <p>Test name<br />
+                        <span className="result">{data.testName}</span></p>
+                    <p>Date<br />
+                        <span className="result">{data.date}</span></p>
+                    <p>Result<br />
+                        <span className="result">{data.result}</span></p>
+                    <p>Flag<br />
+                        <span className="result">{data.flag}</span></p>
+                    <p>Reference range<br />
+                        <span className="result">{data.referenceRange}</span></p>
+                    <p>{data.other}</p>
+                </div>
             </div>
         );
     }

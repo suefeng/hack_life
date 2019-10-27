@@ -10,14 +10,16 @@ class DiaryEntry extends React.Component {
             <div className="diary-entry">
                 <h1>New diary entry</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <p>How are you feeling?</p>
-                    <div className="diary-entry-tags">
-                        <button>Exhausted</button>
-                        <button>Nauseated</button>
-                        <button>Fatigued</button>
-                        <button>Moodiness</button>
-                        <button>Constipation</button>
-                        <button>Cramping</button>
+                    <div className="wrapper">
+                        <p>How are you feeling?</p>
+                        <div className="diary-entry-tags">
+                            <button>Exhausted</button>
+                            <button>Nauseated</button>
+                            <button>Fatigued</button>
+                            <button>Moodiness</button>
+                            <button>Constipation</button>
+                            <button>Cramping</button>
+                        </div>
                     </div>
                     <div className="app-grid">
                         <div>

@@ -54,9 +54,6 @@ class App extends React.Component {
               <Route exact path="/logout" component={LogOut} />
             </div>
           </section>
-          {/* <footer className="app-footer">
-            footer
-          </footer> */}
         </main>
       </Router>
     );

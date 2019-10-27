@@ -42,7 +42,6 @@ class Dashboard extends React.Component {
   }
   handleKeyPress(e) {
     e.preventDefault()
-    console.log('CLICK')
     if (e.nativeEvent.keyCode === 37) {
       this.prev()
     }
@@ -55,7 +54,7 @@ class Dashboard extends React.Component {
     const start = moment(weekToDate(week)).format('MMM. D');
     const end = moment(weekToDate(week + 1)).format('MMM. D');
     return (
-      <div className="dashboard" onKeyDown={this.handleKeyPress}>
+      <div className="dashboard" tabIndex='0' onKeyDown={this.handleKeyPress}>
         <div className="breadcrumb">
           <button onClick={this.prev}>&lsaquo;</button>
           <span className="dashboard-week">Week {week}: {start}&ndash;{end}</span>

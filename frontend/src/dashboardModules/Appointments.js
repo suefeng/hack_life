@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import { weekToDate } from '../constants';
-import { appointments, practitioners } from '../dashboardData/appointments';
+import { appointments } from '../dashboardData/appointments';
 function Appointments(props) {
   const { week } = props
   let startdate = weekToDate(week).toDate()
   let enddate = weekToDate(week + 1).toDate()
   const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  console.log(appointments)
-  console.log(startdate)
-  console.log(enddate)
   let elems = appointments
     .filter(({ date }) =>
       (date >= startdate && date <= enddate))
@@ -32,7 +29,7 @@ function Appointments(props) {
               <p><span className="appointment-month">{month}</span><span className="appointment-day">{day}</span></p>
             </div>
             <div className="appointment-blurb">
-              <p className="text">{text} with {practitionerElem}</p>
+              <div className="text">{text} with {practitionerElem}</div>
               <p>{time}</p>
             </div>
           </div>

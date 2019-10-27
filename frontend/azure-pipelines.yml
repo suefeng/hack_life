@@ -30,9 +30,7 @@ steps:
     replaceExistingArchive: true
 
 - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-  artifact: |
-    name: drop
-    type: Server
+  artifact: drop
 
 - task: AzureRmWebAppDeployment@4
   displayName: 'Azure Web App Deploy: hackhlth frontend'

@@ -20,6 +20,7 @@
   .app-footer {
     display: flex;
     width: 100%;
+    letter-spacing: .54px;
   }
   
   .app-logo {
@@ -211,8 +212,24 @@
     padding: 0 1rem;
     margin: 0 0 1rem;
   }
+
+  .reports-name {
+    color: #777;
+    display: block;
+  }
+
+  .reports-result {
+    color: #333;
+    font-weight: 600;
+    display: block;
+  }
+
   .wrapper {
     padding: 0 1rem;
+    max-width: 960px;
+  }
+  .css-2b097c-container {
+    max-width: 300px;
   }
   .diary-entry-tags {
     margin: 1rem 0 2rem;

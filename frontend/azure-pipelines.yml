@@ -41,4 +41,4 @@ steps:
     WebAppName: 'hackhlth'
     package: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     RuntimeStack: 'NODE|12-lts'
-    StartupCommand: 'npm start'
+    StartupCommand: 'npm run start'

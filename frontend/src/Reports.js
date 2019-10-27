@@ -13,11 +13,11 @@ class Reports extends React.Component {
         this.setState(
             { selectedOption },
             () => {
-                if (this.state.selectedOption.value == 'glucose') {
+                if (this.state.selectedOption.value === 'glucose') {
                     document.getElementById('glucose').classList.remove('hide');
                     document.getElementById('trends').classList.add('hide');
                 }
-                if (this.state.selectedOption.value == 'trends') {
+                if (this.state.selectedOption.value === 'trends') {
                     document.getElementById('glucose').classList.add('hide');
                     document.getElementById('trends').classList.remove('hide');
                 }

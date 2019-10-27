@@ -8,8 +8,6 @@ function Appointments(props) {
     let startdate = weekToDate(week).toDate()
     let enddate = weekToDate(week + 1).toDate()
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-    //.classList.remove('hide');
     let elems = appointments
         .filter(({ date }) =>
             (date >= startdate && date <= enddate))
@@ -44,12 +42,6 @@ function Appointments(props) {
     return (
         <div>
             {elems}
-
-            {/* <div id="notification" className="appointment hide">
-                <h2>Record share request</h2>
-                <p>Dr. Smith referred you to Dr. Jazz. Share records with Dr. Jazz?</p>
-                <button onClick={handleSubmit}>Cancel</button><button onClick={handleSubmit}>Confirm</button>
-            </div> */}
         </div>
     )
 }

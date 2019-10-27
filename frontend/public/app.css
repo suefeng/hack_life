@@ -314,6 +314,26 @@ a.app-sidebar-logo {
     font-weight: 600;
     display: block;
 }
+.table {
+    width: 100%;
+    margin: .5rem 0 2rem;
+    border-collapse: collapse;
+}
+.table th {
+    text-align: left;
+    background: #356fd9;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+.table td {
+    background: #fff;
+    padding: .5rem 1rem;
+    border-top: 1px solid #f4f4f4;
+}
+.table a {
+    color: #1870fb;
+    font-weight: 600;
+}
 
 .wrapper {
     padding: 0 1rem;

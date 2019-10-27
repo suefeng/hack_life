@@ -16,17 +16,15 @@ class About extends React.Component {
     }
     render() {
         //const { about } = this.state;
-        let startdate = new Date('2019-10-10');
-        let enddate = new Date('2019-10-17');
 
         const elems = data.about
-            .filter(({ date }) =>
-                (date >= startdate && date <= enddate))
-            .map(({ date, text, title }) => {
+            .filter(({ week }) =>
+                (week == '5'))
+            .map(({ week, description, trimester }) => {
                 return (
-                    <div className="about-item" key={date}>
-                        <h2>{title}</h2>
-                        <p dangerouslySetInnerHTML={{ __html: text }} />
+                    <div className="about-item" key={week}>
+                        <h2>About the {trimester} trimester, week {week}</h2>
+                        <p dangerouslySetInnerHTML={{ __html: description }} />
                     </div>
                 );
             })

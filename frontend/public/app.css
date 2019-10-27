@@ -43,7 +43,9 @@ body {
 
 .app-logo {
     vertical-align: middle;
-    width: 30px;
+    width: 65px;
+    position: relative;
+    bottom: .69rem;
 }
 
 .app-hamburger {
@@ -51,8 +53,8 @@ body {
     background: transparent;
     font-size: 2rem;
     cursor: pointer;
-    margin: -5px 0 0 0;
-    padding: 0 .5rem 0 1rem;
+    margin: 0;
+    padding: .1rem 1rem 0;
 }
 
 .app-header {
@@ -67,6 +69,7 @@ body {
 .app-header h1 {
     margin: 0;
     display: inline-block;
+    font-size: 0;
 }
 .app-header a {
     font-family: 'PlayfairDisplay', serif;
@@ -134,13 +137,19 @@ a {
     text-decoration: underline;
 }
 .app-sidebar {
-    background: #f1f1f1;
-    padding: 0 1rem;
-    width: 250px;
+    background: #fff;
+    padding: .3rem .8rem;
+    width: 320px;
     min-height: 100vh;
     position: absolute;
     top: 0;
     z-index: 10;
+}
+
+.app-sidebar .app-hamburger {
+    padding: .1rem 1rem 0 0;
+    position: relative;
+    top: 3px;
 }
 
 .app-sidebar ul {
@@ -161,11 +170,12 @@ a {
     border: 0;
 }
 
-.app-sidebar-logo {
-    font-family: 'PlayfairDisplay', serif;
-    font-size: 1.375rem;
-    font-weight: 600;
-    letter-spacing: .79px;
+a.app-sidebar-logo {
+    font-size: 0;
+    display: inline-block;
+}
+.app-sidebar .app-logo {
+    bottom: .5rem;
 }
 
 .home {
@@ -359,7 +369,6 @@ a {
     display: none;
 }
 @media (max-width: 900px) {
-
     .diary-new {
         width: 200px;
     }
@@ -369,11 +378,19 @@ a {
         width: 100%;
     }
     .app h1,
-    .wrapper {
+    .wrapper,
+    .app-module,
+    .grid-about {
         padding: 0;
     }
     .app-hamburger {
         padding: 0 .5rem 0 0;
+    }
+    .breadcrumb a {
+        padding: 0;
+    }
+    .dashboard-week {
+        padding: 0 1rem;
     }
     .app-main-section h1 {
         margin: .5rem 0 1rem;

@@ -25,7 +25,7 @@ class Dashboard extends React.Component {
 
         return (
             <div className="dashboard">
-                <div className="breadcrumb"><a href="/prev">&lsaquo;</a> Week 5: Oct. 10&ndash;17, 2019 <a href="/next">&rsaquo;</a></div>
+                <div className="breadcrumb"><a href="/prev">&lsaquo;</a><span className="dashboard-week">Week 5: Oct. 10&ndash;17, 2019</span><a href="/next">&rsaquo;</a></div>
                 <div className="app-grid">
                     <div className="app-module">
                         <h2>Daily checklist</h2>

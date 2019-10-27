@@ -21,10 +21,10 @@ class Checklist extends React.Component {
         const elems = data.checklist
             .filter(({ date }) =>
                 (date >= startdate && date <= enddate))
-            .map(({ date, text }) => {
+            .map(({ date, text, href }) => {
                 return (
                     <div className="checklist-item" key={date}>
-                        <p>{text}</p>
+                      <p><a href={href}>{text}</a></p>
                     </div>
                 );
             })

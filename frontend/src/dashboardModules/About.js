@@ -1,39 +1,24 @@
 import React from 'react';
 import { data } from '../dashboardData/about';
-class About extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            // about: [],
-            // dailyTips: [],
-            // youMightExperience: [],
-            // labResults: [],
-            // about: []
-        };
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-    }
-    render() {
-        //const { about } = this.state;
-
-        const elems = data.about
-            .filter(({ week }) =>
-                (week === '5'))
+function About(props) {
+  return (
+    <div>
+      {
+        data.about
+          .filter(({ week }) =>
+            (week === props.week))
             .map(({ week, description, trimester }) => {
-                return (
-                    <div className="about-item" key={week}>
-                        <h2>About the {trimester} trimester, week {week}</h2>
-                        <p dangerouslySetInnerHTML={{ __html: description }} />
-                    </div>
-                );
+              return (
+                <div className="about-item" key={week}>
+                  <h1>The {trimester} trimester</h1>
+                  <h2>What to expect this week</h2>
+                  <p>{description}</p>
+                </div>
+              );
             })
-        return (
-            <div>
-                {elems}
-            </div>
-        )
-    }
+      }
+    </div>
+  )
 }
 
 export default About;

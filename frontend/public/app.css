@@ -132,7 +132,6 @@ a {
 .app-main-section h1 {
     font-size: 2rem;
     letter-spacing: 1.07px;
-    padding: 0 1rem;
 }
 .app-main-section a {
     color: #000;
@@ -303,6 +302,10 @@ a.app-sidebar-logo {
     margin: 0 0 1rem;
     display: inline-block;
     font-weight: 600;
+}
+
+.checklist-item a {
+    text-decoration: none;
 }
 
 .reports-name {

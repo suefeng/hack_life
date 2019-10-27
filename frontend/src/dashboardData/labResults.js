@@ -1,26 +1,22 @@
 export const data = {
     "labResults": [
         {
-            "date": "2019-10-10",
-            "text": "blah blah"
+            "lab": "Glucose tolerance test",
+            "date": "2019-10-29",
+            "result": "High",
+            "url": "/doctors-portal-entry"
         },
         {
-            "date": "2019-10-11",
-            "text": "blah blah"
+            "lab": "Maternal blood test",
+            "date": "2019-10-1",
+            "result": "High",
+            "url": "/doctors-portal-entry"
         },
         {
-            "date": "2019-10-12",
-            "text": "blah blah"
-        },
-        {
-            "date": "2019-11-14",
-            "text": "blah blah"
-        },
-        {
-            "date": "2019-12-10",
-            "text": "blah blah"
+            "lab": "1st Trimester Ultrasound",
+            "date": "2019-9-12",
+            "result": "Normal",
+            "url": "/doctors-portal-entry"
         }
-    ].map(({ date, text }) => ({
-        date: new Date(date), text
-    }))
+    ]
 };

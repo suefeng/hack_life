@@ -227,8 +227,8 @@ a.app-sidebar-logo {
 }
 
 .home .app-input {
-    margin: 0 0 1rem 1.5rem;
-    padding: .7rem;
+    margin: 0 0 1rem;
+    padding: .7rem 0 .7rem 1.3rem;
     background: #d8d8d8;
     width: 188px;
 }

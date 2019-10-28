@@ -227,14 +227,14 @@ a.app-sidebar-logo {
 }
 
 .home .app-input {
-    margin: 0 0 1rem;
+    margin: 0 0 1rem 1.5rem;
     padding: .7rem;
     background: #d8d8d8;
     width: 188px;
 }
 
 .home .button {
-    padding: .5rem 5rem;
+    padding: .5rem 1rem;
     margin: 1rem auto;
     width: 188px;
     font-size: 1.125rem;
